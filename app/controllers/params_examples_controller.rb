@@ -4,4 +4,9 @@ class ParamsExamplesController < ApplicationController
     @message2 = params["x"]
     render "query_params.html.erb"
   end
+
+  def name_method
+    @name = params["input_name"].upcase
+    render "name.html.erb"
+  end
 end
