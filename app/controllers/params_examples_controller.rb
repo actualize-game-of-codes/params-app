@@ -5,6 +5,11 @@ class ParamsExamplesController < ApplicationController
     render "query_params.html.erb"
   end
 
+  def url_segment_params_method
+    @message = params["this_is_a_variable"]
+    render "url_segment_params.html.erb"
+  end
+
   def name_method
     @name = params["input_name"].upcase
     if @name.start_with?("A")
