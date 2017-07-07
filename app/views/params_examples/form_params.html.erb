@@ -1,0 +1,17 @@
+<!-- Regular HTML form -->
+<h1>Normal HTML form:</h1>
+<form action="/form_result_url" method="post">
+  <div>
+    Enter message: <input type="text" name="form_message">
+  </div>
+  <input type="submit" value="Submit message!">
+</form>
+
+<!-- Rails HTML form -->
+<h1>Rails HTML form:</h1>
+<%= form_tag "/form_result_url", method: :post do %>
+  <div>
+    Enter message: <input type="text" name="form_message">
+  </div>
+  <input type="submit" value="Submit message!">
+<% end %>

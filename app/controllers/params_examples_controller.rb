@@ -10,6 +10,15 @@ class ParamsExamplesController < ApplicationController
     render "url_segment_params.html.erb"
   end
 
+  def form_params_method
+    render "form_params.html.erb"
+  end
+
+  def form_result_method
+    @message = params["form_message"]
+    render "form_result.html.erb"
+  end
+
   def name_method
     @name = params["input_name"].upcase
     if @name.start_with?("A")
